@@ -148,7 +148,9 @@
 					{
 						"items": [
 							"Objective_rock_1",
-							"Objective_wood_1"
+							"Objective_wood_1",
+							"stoneBalls2",
+							"tree_item_icon2"
 						],
 						"subfolders": [],
 						"name": "Objectives"

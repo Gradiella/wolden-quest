@@ -1622,8 +1622,8 @@
 						}
 					},
 					"world": {
-						"x": 1578,
-						"y": 1749,
+						"x": 1668,
+						"y": 1871,
 						"width": 77.32135406855699,
 						"height": 133.49160715233592,
 						"originX": 0.46153846153846156,
@@ -1774,8 +1774,8 @@
 						}
 					},
 					"world": {
-						"x": 1538,
-						"y": 1531,
+						"x": 1502,
+						"y": 1709,
 						"width": 77.32135406855699,
 						"height": 133.49160715233592,
 						"originX": 0.46153846153846156,
@@ -2080,44 +2080,6 @@
 					"world": {
 						"x": 17,
 						"y": 2165,
-						"width": 77.32135406855699,
-						"height": 133.49160715233592,
-						"originX": 0.46153846153846156,
-						"originY": 0.4473684210526316,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "tree",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 82,
-					"instanceVariables": {
-						"BlockHealth": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 772,
-						"y": 2028,
 						"width": 77.32135406855699,
 						"height": 133.49160715233592,
 						"originX": 0.46153846153846156,
@@ -3218,46 +3180,8 @@
 						}
 					},
 					"world": {
-						"x": 283.6100769042969,
-						"y": 2000.4105224609375,
-						"width": 9,
-						"height": 18,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CollisionBox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 101,
-					"instanceVariables": {
-						"DestroyThisCrap": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "PlayerCollision"
-							}
-						}
-					},
-					"world": {
-						"x": 768.7875366210938,
-						"y": 2095.031005859375,
+						"x": 1140,
+						"y": 2045,
 						"width": 9,
 						"height": 18,
 						"originX": 0.5,
@@ -3370,8 +3294,8 @@
 						}
 					},
 					"world": {
-						"x": 1574.5329049469578,
-						"y": 1814.8823423854008,
+						"x": 1665,
+						"y": 1937,
 						"width": 9,
 						"height": 18,
 						"originX": 0.5,
@@ -3484,8 +3408,8 @@
 						}
 					},
 					"world": {
-						"x": 1534.0547921778923,
-						"y": 1597.2768571136553,
+						"x": 1498,
+						"y": 1775,
 						"width": 9,
 						"height": 18,
 						"originX": 0.5,
@@ -5467,8 +5391,8 @@
 						}
 					},
 					"world": {
-						"x": 284,
-						"y": 1667,
+						"x": 374.4150689046726,
+						"y": 1747.5515915182511,
 						"width": 77.32135406855699,
 						"height": 133.49160715233592,
 						"originX": 0.46153846153846156,
@@ -5788,44 +5712,6 @@
 					}
 				},
 				{
-					"type": "tree",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 195,
-					"instanceVariables": {
-						"BlockHealth": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 680,
-						"y": 2043,
-						"width": 77.32135406855699,
-						"height": 133.49160715233592,
-						"originX": 0.46153846153846156,
-						"originY": 0.4473684210526316,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "CollisionBox",
 					"properties": {
 						"initially-visible": true,
@@ -6113,46 +5999,8 @@
 						}
 					},
 					"world": {
-						"x": 281,
-						"y": 1733,
-						"width": 9,
-						"height": 18,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CollisionBox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 204,
-					"instanceVariables": {
-						"DestroyThisCrap": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "PlayerCollision"
-							}
-						}
-					},
-					"world": {
-						"x": 583,
-						"y": 2045,
+						"x": 371.4150689046726,
+						"y": 1813.5515915182511,
 						"width": 9,
 						"height": 18,
 						"originX": 0.5,
@@ -11264,36 +11112,7 @@
 					}
 				},
 				{
-					"type": "Objective_wood_1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 310,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 392.45375945848673,
-						"y": 310.60893609732756,
-						"width": 90.60533095931184,
-						"height": 90.60533095931184,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Objective_rock_1",
+					"type": "stoneBalls2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -11305,10 +11124,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 520,
-						"y": 316,
-						"width": 97.92890420322357,
-						"height": 97.92890420322357,
+						"x": 516.9688592787211,
+						"y": 319.28922315183706,
+						"width": 87.00896537031917,
+						"height": 87.00896537031917,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -11363,6 +11182,35 @@
 						"height": 59.503405687157965,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "tree_item_icon2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 310,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 391,
+						"y": 313,
+						"width": 81.12136311612144,
+						"height": 81.12136311612144,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -12329,8 +12177,8 @@
 						}
 					},
 					"world": {
-						"x": 1539,
-						"y": 1075,
+						"x": 1615.2177798670975,
+						"y": 1197.5460587075447,
 						"width": 117.9113847710138,
 						"height": 125.51857088527275,
 						"originX": 0.5,
@@ -12443,8 +12291,8 @@
 						}
 					},
 					"world": {
-						"x": 1683,
-						"y": 1443,
+						"x": 1712.6443782925107,
+						"y": 1606.4326670732473,
 						"width": 117.9113847710138,
 						"height": 125.51857088527275,
 						"originX": 0.5,
@@ -12481,46 +12329,8 @@
 						}
 					},
 					"world": {
-						"x": 1850,
-						"y": 1126,
-						"width": 117.9113847710138,
-						"height": 125.51857088527275,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "rock",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 336,
-					"instanceVariables": {
-						"BlockHealth": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 1438,
-						"y": 1658,
+						"x": 1873.980793188091,
+						"y": 1313.9163885474757,
 						"width": 117.9113847710138,
 						"height": 125.51857088527275,
 						"originX": 0.5,
@@ -12557,8 +12367,8 @@
 						}
 					},
 					"world": {
-						"x": 1210,
-						"y": 1033,
+						"x": 1118,
+						"y": 1202,
 						"width": 117.9113847710138,
 						"height": 125.51857088527275,
 						"originX": 0.5,
@@ -12696,44 +12506,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 341,
-					"instanceVariables": {
-						"DestroyThisCrap": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "PlayerCollision"
-							}
-						}
-					},
-					"world": {
-						"x": 1433,
-						"y": 1710,
-						"width": 105.7670266119344,
-						"height": -9.293259838937274,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CollisionBox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 342,
 					"instanceVariables": {
 						"DestroyThisCrap": 0
@@ -12785,8 +12557,8 @@
 						}
 					},
 					"world": {
-						"x": 1845,
-						"y": 1177,
+						"x": 1868.980793188091,
+						"y": 1364.9163885474757,
 						"width": 105.7670266119344,
 						"height": -9.293259838937274,
 						"originX": 0.5,
@@ -12823,8 +12595,8 @@
 						}
 					},
 					"world": {
-						"x": 1534,
-						"y": 1124,
+						"x": 1610.2177798670975,
+						"y": 1246.5460587075447,
 						"width": 105.7670266119344,
 						"height": -9.293259838937274,
 						"originX": 0.5,
@@ -12861,8 +12633,8 @@
 						}
 					},
 					"world": {
-						"x": 1204,
-						"y": 1086,
+						"x": 1112,
+						"y": 1255,
 						"width": 105.7670266119344,
 						"height": -9.293259838937274,
 						"originX": 0.5,
@@ -12937,8 +12709,8 @@
 						}
 					},
 					"world": {
-						"x": 1677,
-						"y": 1494,
+						"x": 1706.6443782925107,
+						"y": 1657.4326670732473,
 						"width": 105.7670266119344,
 						"height": -9.293259838937274,
 						"originX": 0.5,
@@ -13000,44 +12772,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 349,
-					"instanceVariables": {
-						"BlockHealth": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 767,
-						"y": 1484,
-						"width": 117.9113847710138,
-						"height": 125.51857088527275,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "rock",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 350,
 					"instanceVariables": {
 						"BlockHealth": 0
@@ -13051,8 +12785,8 @@
 						}
 					},
 					"world": {
-						"x": 259,
-						"y": 2016,
+						"x": 1115,
+						"y": 2061,
 						"width": 117.9113847710138,
 						"height": 125.51857088527275,
 						"originX": 0.5,
@@ -13089,8 +12823,8 @@
 						}
 					},
 					"world": {
-						"x": 89,
-						"y": 1633,
+						"x": 192.86536599082694,
+						"y": 1670.3616248724022,
 						"width": 117.9113847710138,
 						"height": 125.51857088527275,
 						"originX": 0.5,
@@ -13129,82 +12863,6 @@
 					"world": {
 						"x": 911,
 						"y": 1852,
-						"width": 117.9113847710138,
-						"height": 125.51857088527275,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "rock",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 353,
-					"instanceVariables": {
-						"BlockHealth": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 1243.0533976078264,
-						"y": 1815.9278095699954,
-						"width": 117.9113847710138,
-						"height": 125.51857088527275,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "rock",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 354,
-					"instanceVariables": {
-						"BlockHealth": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 666,
-						"y": 2067,
 						"width": 117.9113847710138,
 						"height": 125.51857088527275,
 						"originX": 0.5,
@@ -13279,8 +12937,8 @@
 						}
 					},
 					"world": {
-						"x": 83,
-						"y": 1685,
+						"x": 187.2979704776513,
+						"y": 1712.6082487191281,
 						"width": 105.7670266119344,
 						"height": -9.293259838937274,
 						"originX": 0.5,
@@ -13317,8 +12975,8 @@
 						}
 					},
 					"world": {
-						"x": 252,
-						"y": 2067,
+						"x": 1108,
+						"y": 2112,
 						"width": 105.7670266119344,
 						"height": -9.293259838937274,
 						"originX": 0.5,
@@ -13380,44 +13038,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 359,
-					"instanceVariables": {
-						"DestroyThisCrap": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "PlayerCollision"
-							}
-						}
-					},
-					"world": {
-						"x": 661,
-						"y": 2119,
-						"width": 105.7670266119344,
-						"height": -9.293259838937274,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CollisionBox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 360,
 					"instanceVariables": {
 						"DestroyThisCrap": 0
@@ -13433,44 +13053,6 @@
 					"world": {
 						"x": 904,
 						"y": 1903,
-						"width": 105.7670266119344,
-						"height": -9.293259838937274,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CollisionBox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 361,
-					"instanceVariables": {
-						"DestroyThisCrap": 0
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "PlayerCollision"
-							}
-						}
-					},
-					"world": {
-						"x": 1238.0533976078264,
-						"y": 1866.9278095699954,
 						"width": 105.7670266119344,
 						"height": -9.293259838937274,
 						"originX": 0.5,

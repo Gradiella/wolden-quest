@@ -622,29 +622,43 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
+							"sid": 361660712576043,
+							"parameters": {
+								"key": 49
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 238771032501107,
+							"parameters": {
+								"variable": "item_Stone",
+								"value": "10"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 620293399878780,
+							"parameters": {
+								"variable": "item_Wood",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 579209843606687
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
 							"sid": 301906036205288,
 							"parameters": {
 								"key": 90
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 786420692176846,
-							"parameters": {
-								"variable": "item_Wood",
-								"comparison": 4,
-								"value": "0"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 141971998883920,
-							"parameters": {
-								"variable": "obj_wood_2",
-								"comparison": 4,
-								"value": "0"
 							}
 						},
 						{
@@ -658,45 +672,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "construction2",
-							"sid": 874255859292454,
-							"parameters": {
-								"object": "Particles",
-								"layer": "0",
-								"image-point": "0",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "set-angle",
-							"objectClass": "Particles",
-							"sid": 390878934090336,
-							"parameters": {
-								"angle": "270"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 515747377657613,
-							"parameters": {
-								"variable": "item_Wood",
-								"value": "1"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 950655336051660,
-							"parameters": {
-								"variable": "obj_wood_2",
-								"value": "1"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 772194676695228,
 					"children": [
 						{
@@ -725,6 +701,25 @@
 							],
 							"actions": [
 								{
+									"id": "spawn-another-object",
+									"objectClass": "construction2",
+									"sid": 651189642064736,
+									"parameters": {
+										"object": "Particles",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "Particles",
+									"sid": 390878934090336,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
 									"sid": 875625236176028,
@@ -744,6 +739,152 @@
 								}
 							],
 							"sid": 910206912836286
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 716064139184163,
+									"parameters": {
+										"variable": "item_Wood",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 420905008122264,
+									"parameters": {
+										"variable": "obj_wood_2",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "construction2",
+									"sid": 643854927588274,
+									"parameters": {
+										"object": "Particles",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "Particles",
+									"sid": 390878934090336,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 844175164744760,
+									"parameters": {
+										"variable": "item_Wood",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 537778857771212,
+									"parameters": {
+										"variable": "obj_wood_2",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 512418499191176
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 674557837601937,
+									"parameters": {
+										"first-value": "obj_wood_2",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 334026303669207,
+									"parameters": {
+										"first-value": "obj_stone_2",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "construction2",
+									"sid": 312709994708664,
+									"parameters": {
+										"object": "campfire",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "campfire",
+									"sid": 499675820990430,
+									"parameters": {
+										"angle": "campfire.Angle + 180"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "campfire",
+									"sid": 747807575375760,
+									"parameters": {
+										"width": "100",
+										"height": "100"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "construction2",
+									"sid": 762189723366429
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Text7",
+									"sid": 821190713717726
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Text6",
+									"sid": 281842554124985
+								},
+								{
+									"id": "destroy",
+									"objectClass": "stoneBalls2",
+									"sid": 872771130401701
+								},
+								{
+									"id": "destroy",
+									"objectClass": "tree_item_icon2",
+									"sid": 464699341977079
+								}
+							],
+							"sid": 969205851355991
 						}
 					]
 				},
@@ -759,26 +900,6 @@
 							}
 						},
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 220582077540033,
-							"parameters": {
-								"variable": "item_Wood",
-								"comparison": 4,
-								"value": "0"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 612829019152288,
-							"parameters": {
-								"variable": "obj_wood_1",
-								"comparison": 4,
-								"value": "0"
-							}
-						},
-						{
 							"id": "is-overlapping-at-offset",
 							"objectClass": "player2",
 							"sid": 158039019494667,
@@ -789,45 +910,7 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "construction",
-							"sid": 835526879091410,
-							"parameters": {
-								"object": "Particles",
-								"layer": "0",
-								"image-point": "0",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "set-angle",
-							"objectClass": "Particles",
-							"sid": 814044546107253,
-							"parameters": {
-								"angle": "270"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 539829044632123,
-							"parameters": {
-								"variable": "item_Wood",
-								"value": "1"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 737247951594938,
-							"parameters": {
-								"variable": "obj_wood_1",
-								"value": "1"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 482774060575596,
 					"children": [
 						{
@@ -856,6 +939,25 @@
 							],
 							"actions": [
 								{
+									"id": "spawn-another-object",
+									"objectClass": "construction",
+									"sid": 188456369210049,
+									"parameters": {
+										"object": "Particles",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "Particles",
+									"sid": 805453045405920,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
 									"sid": 128839563087815,
@@ -875,6 +977,144 @@
 								}
 							],
 							"sid": 346988868466669
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 791947569571947,
+									"parameters": {
+										"variable": "item_Wood",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 630528054092270,
+									"parameters": {
+										"variable": "obj_wood_1",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "construction",
+									"sid": 432721350583841,
+									"parameters": {
+										"object": "Particles",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "Particles",
+									"sid": 287391287207486,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 245935510046127,
+									"parameters": {
+										"variable": "item_Wood",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 317853268552451,
+									"parameters": {
+										"variable": "obj_wood_1",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 186231494607003
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 798793688140204,
+									"parameters": {
+										"first-value": "obj_wood_1",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 922622849803109,
+									"parameters": {
+										"first-value": "obj_stone_1",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "construction",
+									"sid": 922097792933721,
+									"parameters": {
+										"object": "house",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "house",
+									"sid": 774203682992751,
+									"parameters": {
+										"width": "300",
+										"height": "300"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "construction",
+									"sid": 197228844874030
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Text4",
+									"sid": 769200978856474
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Text5",
+									"sid": 738452117534454
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Objective_rock_1",
+									"sid": 839061125687302
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Objective_wood_1",
+									"sid": 441011510334952
+								}
+							],
+							"sid": 542675405661096
 						}
 					]
 				},
