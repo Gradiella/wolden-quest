@@ -1,0 +1,51 @@
+{
+	"name": "tree",
+	"plugin-id": "Sprite",
+	"sid": 211187111350271,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "BlockHealth",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 632854394075070
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 965692216744364
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 13,
+						"height": 19,
+						"originX": 0.46153846153846156,
+						"originY": 0.4473684210526316,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9474167,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 768504995458779,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

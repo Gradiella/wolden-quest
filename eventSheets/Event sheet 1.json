@@ -1,0 +1,948 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "NPC",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 519615464703744
+		},
+		{
+			"eventType": "variable",
+			"name": "NPCArrayPointer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 670595746824117
+		},
+		{
+			"eventType": "variable",
+			"name": "item_Wood",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "wood the item",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 425891705157120
+		},
+		{
+			"eventType": "variable",
+			"name": "item_Stone",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "wood the item",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 995205921574944
+		},
+		{
+			"eventType": "variable",
+			"name": "obj_wood_1",
+			"type": "number",
+			"initialValue": "15",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 878749501681395
+		},
+		{
+			"eventType": "variable",
+			"name": "obj_stone_1",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 222857312044346
+		},
+		{
+			"eventType": "variable",
+			"name": "obj_wood_2",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 788602423787119
+		},
+		{
+			"eventType": "variable",
+			"name": "obj_stone_2",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 716822810492441
+		},
+		{
+			"eventType": "script",
+			"script": ""
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Game",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 103003364279467
+						}
+					],
+					"actions": [
+						{
+							"id": "set-at-x",
+							"objectClass": "Array",
+							"sid": 197628180757810,
+							"parameters": {
+								"x": "0",
+								"value": "\"Whats up\""
+							}
+						},
+						{
+							"id": "set-at-x",
+							"objectClass": "Array",
+							"sid": 495523047871525,
+							"parameters": {
+								"x": "1",
+								"value": "\"New dialogue coming soon\""
+							}
+						}
+					],
+					"sid": 443828970334683
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 952973371416760
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "rock",
+							"sid": 167313729219330,
+							"parameters": {
+								"instance-variable": "BlockHealth",
+								"comparison": 0,
+								"value": "15"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "rock",
+							"sid": 602937601642231
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "rock",
+							"sid": 363414793491870,
+							"parameters": {
+								"object": "demolished",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "demolished",
+							"sid": 233886272320659,
+							"parameters": {
+								"width": "144",
+								"height": "144"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 708987413329933,
+							"parameters": {
+								"variable": "item_Stone",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 883126651917635
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 473425512310489
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "tree",
+							"sid": 371489112230210,
+							"parameters": {
+								"instance-variable": "BlockHealth",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "tree",
+							"sid": 753075148808666
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "tree",
+							"sid": 799924762053946,
+							"parameters": {
+								"object": "trunk",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "trunk",
+							"sid": 464921687046045,
+							"parameters": {
+								"width": "225",
+								"height": "225"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 876467872975145,
+							"parameters": {
+								"variable": "item_Wood",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 364404890264727
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 715546053764323
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "player2",
+							"sid": 885315604821804,
+							"parameters": {
+								"x": "PlayerCollision.X - 10",
+								"y": "PlayerCollision.Y - 45"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 769732296031267,
+							"parameters": {
+								"text": "item_Stone"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text3",
+							"sid": 711638247403301,
+							"parameters": {
+								"text": "item_Wood"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text4",
+							"sid": 664650757241647,
+							"parameters": {
+								"text": "obj_wood_1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text5",
+							"sid": 180747843856998,
+							"parameters": {
+								"text": "obj_stone_1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text6",
+							"sid": 389278004595447,
+							"parameters": {
+								"text": "obj_wood_2"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 403137913733708,
+							"parameters": {
+								"text": "obj_stone_2"
+							}
+						}
+					],
+					"sid": 389938831681190
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerCollision",
+							"sid": 737741264895292,
+							"parameters": {
+								"object": "CollisionBox"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "PlayerCollision",
+							"sid": 640444066383258,
+							"behaviorType": "8Direction"
+						}
+					],
+					"sid": 549066122729314
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 601563125701597,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "player2",
+							"sid": 997105408155648,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 342044287946319
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 230690365779462,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "player2",
+							"sid": 941106366045933,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 444644365055658
+				}
+			],
+			"sid": 777098580984719
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogue Engine",
+			"description": "I MADE THIS NO WAY",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 625916096315398,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 408349247791283,
+							"parameters": {
+								"object": "npc",
+								"offset-x": "12",
+								"offset-y": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Locatinator_",
+							"sid": 310673851766986,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Text",
+							"sid": 129826643725281,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 484084844338686,
+							"parameters": {
+								"variable": "NPCArrayPointer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 976455448871686,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 642352827782161,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 115167642389681,
+									"parameters": {
+										"text": "\"Hello im a native here\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 749218568862770
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 253079335423318,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 992635020728658,
+									"parameters": {
+										"text": "\"Im lazy to talk\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 569708793795161
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 546287870691458,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Locatinator_",
+									"sid": 128069461669942,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text",
+									"sid": 974160533336113,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 833725342136721,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 430990042973346
+						}
+					]
+				}
+			],
+			"sid": 246167013353003
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 168045121600750
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Group1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 338845741237905
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Class",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 522722486027511,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 988932728487870,
+							"parameters": {
+								"object": "rock",
+								"offset-x": "12",
+								"offset-y": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "rock",
+							"sid": 833991699019416,
+							"parameters": {
+								"object": "Particles",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Particles",
+							"sid": 845893488114302,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "rock",
+							"sid": 512637696277565,
+							"parameters": {
+								"instance-variable": "BlockHealth",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 936761587790520
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 301906036205288,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 786420692176846,
+							"parameters": {
+								"variable": "item_Wood",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 141971998883920,
+							"parameters": {
+								"variable": "obj_wood_2",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 609937641215484,
+							"parameters": {
+								"object": "construction2",
+								"offset-x": "12",
+								"offset-y": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "construction2",
+							"sid": 874255859292454,
+							"parameters": {
+								"object": "Particles",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Particles",
+							"sid": 390878934090336,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 515747377657613,
+							"parameters": {
+								"variable": "item_Wood",
+								"value": "1"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 950655336051660,
+							"parameters": {
+								"variable": "obj_wood_2",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 772194676695228,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 602353060255290,
+									"parameters": {
+										"variable": "item_Stone",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 368185756955932,
+									"parameters": {
+										"variable": "obj_stone_2",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 875625236176028,
+									"parameters": {
+										"variable": "item_Stone",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 458720917162585,
+									"parameters": {
+										"variable": "obj_stone_2",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 910206912836286
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 578979913112768,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 220582077540033,
+							"parameters": {
+								"variable": "item_Wood",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 612829019152288,
+							"parameters": {
+								"variable": "obj_wood_1",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 158039019494667,
+							"parameters": {
+								"object": "construction",
+								"offset-x": "12",
+								"offset-y": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "construction",
+							"sid": 835526879091410,
+							"parameters": {
+								"object": "Particles",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Particles",
+							"sid": 814044546107253,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 539829044632123,
+							"parameters": {
+								"variable": "item_Wood",
+								"value": "1"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 737247951594938,
+							"parameters": {
+								"variable": "obj_wood_1",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 482774060575596,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 519930046788095,
+									"parameters": {
+										"variable": "item_Stone",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 167950821225774,
+									"parameters": {
+										"variable": "obj_stone_1",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 128839563087815,
+									"parameters": {
+										"variable": "item_Stone",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 963577643618694,
+									"parameters": {
+										"variable": "obj_stone_1",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 346988868466669
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 585513109038917,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 432534223656228,
+							"parameters": {
+								"object": "tree",
+								"offset-x": "12",
+								"offset-y": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "tree",
+							"sid": 724220768770816,
+							"parameters": {
+								"object": "Particles",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Particles",
+							"sid": 878639336307348,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "tree",
+							"sid": 375933810480799,
+							"parameters": {
+								"instance-variable": "BlockHealth",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 270599214307062,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 999804411171409
+						}
+					]
+				}
+			],
+			"sid": 946882590032165
+		}
+	],
+	"sid": 739004957710502
+}

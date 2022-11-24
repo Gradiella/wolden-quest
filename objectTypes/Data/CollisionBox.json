@@ -1,0 +1,51 @@
+{
+	"name": "CollisionBox",
+	"plugin-id": "Sprite",
+	"sid": 614732976929914,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "DestroyThisCrap",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 702196255571359
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 964529895051500
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3776462,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 638486681636945,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

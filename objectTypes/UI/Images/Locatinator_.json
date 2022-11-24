@@ -1,0 +1,43 @@
+{
+	"name": "Locatinator_",
+	"plugin-id": "Sprite",
+	"sid": 622337384363613,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 874270269421807
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 17,
+						"originX": 0.5,
+						"originY": 0.8235294117647058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2171014,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 848850298845910,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

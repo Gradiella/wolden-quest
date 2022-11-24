@@ -1,0 +1,55 @@
+{
+	"name": "gence",
+	"plugin-id": "Sprite",
+	"sid": 188059617160700,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 421082020885789
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 34,
+						"height": 27,
+						"originX": 0.5,
+						"originY": 0.37037037037037035,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7737757,
+						"collisionPoly": {
+							"points": [
+								0.029411764705882353,
+								0,
+								0.9705882352941176,
+								0,
+								0.9705882352941176,
+								0.9629629629629629,
+								0.029411764705882353,
+								0.9629629629629629
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 616289953763007,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
