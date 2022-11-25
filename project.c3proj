@@ -89,7 +89,12 @@
 	],
 	"uniqueId": "fa0bzjvfles",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Text8",
+			"locatinator_default",
+			"npcdefault",
+			"npcdefault2"
+		],
 		"subfolders": [
 			{
 				"items": [],
@@ -99,10 +104,10 @@
 							"Text",
 							"Text2",
 							"Text3",
-							"Text4",
-							"Text5",
-							"Text6",
-							"Text7"
+							"Tooltip1",
+							"Tooltip2",
+							"Tooltip3",
+							"Tooltip4"
 						],
 						"subfolders": [],
 						"name": "Texts"

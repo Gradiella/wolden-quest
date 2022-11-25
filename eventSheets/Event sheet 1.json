@@ -23,6 +23,26 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "NPCArrayPointer2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 258863616148611
+		},
+		{
+			"eventType": "variable",
+			"name": "NPCArrayPointer3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 225821981590787
+		},
+		{
+			"eventType": "variable",
 			"name": "item_Wood",
 			"type": "number",
 			"initialValue": "0",
@@ -80,6 +100,46 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 716822810492441
+		},
+		{
+			"eventType": "variable",
+			"name": "curQuest",
+			"type": "string",
+			"initialValue": "Free",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 583471898952860
+		},
+		{
+			"eventType": "variable",
+			"name": "QuestFinishedStage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 426530116260557
+		},
+		{
+			"eventType": "variable",
+			"name": "ChopChopTracker",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 948532096212844
+		},
+		{
+			"eventType": "variable",
+			"name": "ChopChopTracker2",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 342406229048744
 		},
 		{
 			"eventType": "script",
@@ -176,6 +236,15 @@
 								"variable": "item_Stone",
 								"value": "1"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 460088707932151,
+							"parameters": {
+								"variable": "ChopChopTracker",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 883126651917635
@@ -233,6 +302,15 @@
 								"variable": "item_Wood",
 								"value": "1"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 852156303775029,
+							"parameters": {
+								"variable": "ChopChopTracker2",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 364404890264727
@@ -274,7 +352,7 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "Text4",
+							"objectClass": "Tooltip1",
 							"sid": 664650757241647,
 							"parameters": {
 								"text": "obj_wood_1"
@@ -282,7 +360,7 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "Text5",
+							"objectClass": "Tooltip2",
 							"sid": 180747843856998,
 							"parameters": {
 								"text": "obj_stone_1"
@@ -290,7 +368,7 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "Text6",
+							"objectClass": "Tooltip3",
 							"sid": 389278004595447,
 							"parameters": {
 								"text": "obj_wood_2"
@@ -298,7 +376,7 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "Text7",
+							"objectClass": "Tooltip4",
 							"sid": 403137913733708,
 							"parameters": {
 								"text": "obj_stone_2"
@@ -429,10 +507,19 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 484084844338686,
+							"sid": 508092551209407,
 							"parameters": {
 								"variable": "NPCArrayPointer",
 								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "PlayerCollision",
+							"sid": 284711414412700,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "disabled"
 							}
 						}
 					],
@@ -449,6 +536,16 @@
 										"variable": "NPCArrayPointer",
 										"comparison": 0,
 										"value": "1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 436048079463989,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
 									}
 								}
 							],
@@ -477,15 +574,25 @@
 										"comparison": 0,
 										"value": "2"
 									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 273757330833554,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 992635020728658,
+									"sid": 524670211821386,
 									"parameters": {
-										"text": "\"Im lazy to talk\"",
+										"text": "\"Welcome to this wondeful land!\"",
 										"duration": "1"
 									}
 								}
@@ -498,11 +605,769 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 546287870691458,
+									"sid": 450551478457453,
 									"parameters": {
 										"variable": "NPCArrayPointer",
 										"comparison": 0,
 										"value": "3"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 776882952437987,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 652311317541830,
+									"parameters": {
+										"text": "\"I see you're new here, Let me tell you some fundementals\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 775176159393618
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 938662439979222,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 257165457289631,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 559853276432879,
+									"parameters": {
+										"text": "\"Press Z to interact (you probably already know that)\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 826553828714619
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 824387163832611,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "5"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 829502442904450,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 402001912596149,
+									"parameters": {
+										"text": "\"You could chop trees down, or Punch some stone to mine them\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 204030385143180
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 361581327883035,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 198296806279715,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 294921166702823,
+									"parameters": {
+										"text": "\"Why don't you try it out?\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 568243532611175
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 100278007646028,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 948267220686919,
+									"parameters": {
+										"variable": "ChopChopTracker"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 250296949334179,
+									"parameters": {
+										"variable": "ChopChopTracker2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 854328056905001,
+									"parameters": {
+										"text": "\"Wow, nice you learnt so quick!\"",
+										"duration": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 909021808395606,
+									"parameters": {
+										"variable": "QuestFinishedStage",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 209042032113057,
+									"parameters": {
+										"variable": "curQuest",
+										"value": "\"Free\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text8",
+									"sid": 640693153781554,
+									"parameters": {
+										"text": "\"No Quests\""
+									}
+								}
+							],
+							"sid": 528116555736396
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 770613754559363,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "7"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 912821381647924,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 773750287629616,
+									"parameters": {
+										"text": "\"Now lets get into the second fundemntals!. Which is building\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 638186092493981
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 894711193840403,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "8"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 538461161744835,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 679969700194370,
+									"parameters": {
+										"text": "\"You sure love building right?\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 375352044816958
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 175835684068778,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "8"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 773021931923541,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 153679358860649,
+									"parameters": {
+										"text": "\"You see those tooltip on top of the Unfinished buildings?\"",
+										"duration": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Objective_rock_1",
+									"sid": 254864589508415,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "tree_item_icon2",
+									"sid": 647375786695865,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "stoneBalls2",
+									"sid": 617029190041570,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Objective_wood_1",
+									"sid": 954930937405905,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Tooltip4",
+									"sid": 391833280468027,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Tooltip3",
+									"sid": 290489721907756,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Tooltip2",
+									"sid": 804033808299598,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Tooltip1",
+									"sid": 834923267615801,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 964888989307968
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 319595968143200,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "9"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 931586553093663,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 138828249156518,
+									"parameters": {
+										"text": "\"Thats your progress counter towards building the structure\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 497145143511742
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 263760937558837,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 385721749960351,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 842504190236893,
+									"parameters": {
+										"text": "\"How about now you try to finish the buildings?\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 597816532904829
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 858705371750642,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "11"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 461097314463971,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 226540075804610,
+									"parameters": {
+										"text": "\"And also, Socialize!, im not the only human being that is here!\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 569802622262597
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 147180010639435,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "12"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 763647241041746,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 543206897599479,
+									"parameters": {
+										"text": "\"They will sure love to helo newcomers.\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 775839575680987
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 735163483731148,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "13"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 353135935527910,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 163476621768757,
+									"parameters": {
+										"text": "\"Anyway See ya.\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 183593256957557
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 776116000656627,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "14"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 942918677878532,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Locatinator_",
+									"sid": 670058459882732,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text",
+									"sid": 370036404554688,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 615162524716265,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"value": "14"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "PlayerCollision",
+									"sid": 680927751284684,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 237670328025193
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 552047826894346,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "15"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 739389716998546,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 989544778069096,
+									"parameters": {
+										"text": "\"Go socialize with other people man, are you an introvert?\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 599119554725535
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 228938977263624,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "16"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 638187431187594,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Locatinator_",
+									"sid": 438549267612446,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text",
+									"sid": 977488968626065,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 369187560592733,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"value": "14"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "PlayerCollision",
+									"sid": 968938019196957,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 755970091449757
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 166138460712973,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"comparison": 0,
+										"value": "7"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 483907827431346,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 211523080558288,
+									"parameters": {
+										"first-value": "curQuest",
+										"comparison": 1,
+										"second-value": "\"ChopChop\""
 									}
 								}
 							],
@@ -526,14 +1391,2129 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 833725342136721,
+									"sid": 289275843279623,
 									"parameters": {
 										"variable": "NPCArrayPointer",
-										"value": "0"
+										"value": "5"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 335459268310431,
+									"parameters": {
+										"variable": "curQuest",
+										"value": "\"ChopChop\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text8",
+									"sid": 870579934046909,
+									"parameters": {
+										"text": "\"Chop 1 Tree and Mine 1 Stone\""
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "PlayerCollision",
+									"sid": 478904119619103,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "enabled"
 									}
 								}
 							],
 							"sid": 430990042973346
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 121451612643640,
+									"parameters": {
+										"first-value": "curQuest",
+										"comparison": 0,
+										"second-value": "\"ChopChop\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 653866918092341,
+									"parameters": {
+										"first-value": "NPCArrayPointer",
+										"comparison": 0,
+										"second-value": "7"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 155830499245918,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Locatinator_",
+									"sid": 171214369445417,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text",
+									"sid": 603732523101609,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 758335426753118,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"value": "5"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text8",
+									"sid": 256998106557248,
+									"parameters": {
+										"text": "\"Chop 1 Tree and Mine 1 Stone\""
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "PlayerCollision",
+									"sid": 728833997506071,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 415559478054250
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 186286097382796,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 107613756254198,
+							"parameters": {
+								"object": "npcdefault",
+								"offset-x": "12",
+								"offset-y": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Locatinator_",
+							"sid": 595774342221982,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Text",
+							"sid": 894068917916432,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 974396098516757,
+							"parameters": {
+								"variable": "NPCArrayPointer2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "PlayerCollision",
+							"sid": 911991292141525,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 660922085595378,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 478380272248058,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 497003884291817,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 272731666161706,
+									"parameters": {
+										"text": "\"Hello, are you a newcomer?\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 294834140160788
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 896954330424723,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 230211137074106,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 927152799666847,
+									"parameters": {
+										"text": "\"Also, are you lost?\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 441791623091975
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 960161510200123,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 854691463372006,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 498547132705643,
+									"parameters": {
+										"text": "\"Or you just hate that guy beside the fence?\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 662874296038027
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 334744490895060,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 486185045099926,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 439592688896034,
+									"parameters": {
+										"text": "\"Sorry, but i think you should talk to him first.\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 538993938045008
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 415971926712027,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "5"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 438911450278136,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 175418843576564,
+									"parameters": {
+										"text": "\"He's not that annoying, trust me!\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 461022652112813
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 112652696697876,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 928378074761112,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Locatinator_",
+									"sid": 311050413660293,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text",
+									"sid": 939937028948771,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 892800085215740,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "PlayerCollision",
+									"sid": 298624573917977,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 321510535984343
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 382512902948203,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 150656674154058,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 836297013214519,
+									"parameters": {
+										"text": "\"Hello im a...\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 844902427405378
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 382963016741445,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 187009963166563,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 370784125990093,
+									"parameters": {
+										"text": "\"I dont really know my job, but i stand here all day\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 814189663196591
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 352130279295823,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 571519648984128,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 865849401000589,
+									"parameters": {
+										"text": "\"Waiting for someone to finnaly talk to me.\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 160352751122345
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 708327077968595,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 735239911658808,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 887382976741786,
+									"parameters": {
+										"text": "\"Uhm, sorry, hey!\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 257040977587389
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 124915160730294,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "5"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 102943419077686,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 161803092492069,
+									"parameters": {
+										"text": "\"You're a newcomer huh?\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 756083561995770
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 691424538701176,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 184223420194916,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 281472220449166,
+									"parameters": {
+										"text": "\"Well, you have just discovered a new Area!\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 968191715547135
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 533504753936537,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "7"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 908952925678873,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 880470116327418,
+									"parameters": {
+										"text": "\"This is called Rocky COLIY\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 550225397143044
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 455537583316068,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "8"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 487931809094540,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 696533230838335,
+									"parameters": {
+										"text": "\"Don't ask me why its named that, its history at this point.\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 147760586299187
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 459596555714414,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "9"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 412160543817560,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 656319269635057,
+									"parameters": {
+										"text": "\"In this Area, There Soooo many Stonesssss\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 775919506540876
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 397337300174949,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 535976227205897,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 784528114543857,
+									"parameters": {
+										"text": "\"Yeah thats about it.\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 778014356607488
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 862103759244402,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "11"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 735374060668527,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 331473670446567,
+									"parameters": {
+										"text": "\"Fun fact : Stones are tougher to break!!!\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 400812099080281
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 837519648412482,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "12"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 787461061958798,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 189074437351695,
+									"parameters": {
+										"text": "\"it took me while to notice that Stone is harder than Wood,, So i would be proud if i educate someone.\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 222876062075960
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 214655026445763,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "13"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 680788455210130,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 205982455412973,
+									"parameters": {
+										"text": "\"Dont be as dumb as me kiddo!\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 467560818090993
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 741280495582606,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "14"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 687964380951588,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Locatinator_",
+									"sid": 686611584586463,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text",
+									"sid": 971002753703529,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 792915145900642,
+									"parameters": {
+										"variable": "NPCArrayPointer",
+										"value": "14"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "PlayerCollision",
+									"sid": 966606081868748,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 442978835973389
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 931414181013313,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "15"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 889617760582904,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "Text",
+									"sid": 421746300007026,
+									"parameters": {
+										"text": "\"Dont mind me!, im just standing.. like usual....\"",
+										"duration": "1"
+									}
+								}
+							],
+							"sid": 839189991927890
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 590605723834321,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"comparison": 0,
+										"value": "16"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 418996732487871,
+									"parameters": {
+										"first-value": "QuestFinishedStage",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Locatinator_",
+									"sid": 974195654664314,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Text",
+									"sid": 407672070710223,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 652035849927599,
+									"parameters": {
+										"variable": "NPCArrayPointer2",
+										"value": "14"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "PlayerCollision",
+									"sid": 195769290848765,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 788538493206839
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 352491060612241,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "player2",
+							"sid": 531451180635425,
+							"parameters": {
+								"object": "npcdefault2",
+								"offset-x": "12",
+								"offset-y": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Locatinator_",
+							"sid": 498241523019523,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Text",
+							"sid": 184796798491655,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 639920775311581,
+							"parameters": {
+								"variable": "NPCArrayPointer3",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "PlayerCollision",
+							"sid": 851511086088704,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 969049913227979,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 741380254753448,
+									"parameters": {
+										"first-value": "item_Wood",
+										"comparison": 3,
+										"second-value": "10"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 712500299933952,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 764391438450085,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 438423109210632,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 952505229872978,
+											"parameters": {
+												"text": "\"Hmm, a newcomer ey?\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 223462594850395
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 915194793426114,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 505717781562429,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 461961564257467,
+											"parameters": {
+												"text": "\"Talk to the guy beside the fence first, you wouldnt get what am i saying\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 526831091833519
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 559978461574475,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 550982489392877,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Locatinator_",
+											"sid": 340362955310599,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Text",
+											"sid": 854274799141802,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 208559011138291,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "PlayerCollision",
+											"sid": 393878921463416,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 591816466045493
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 970793045357951,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 751051830015741,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 354756284300474,
+											"parameters": {
+												"text": "\"Hey, Im homphobic, transphobic and racist\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 719209136514955
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 375528940671598,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 131201344629635,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 635993640902052,
+											"parameters": {
+												"text": "\"Would you mind giving me 10 wood?\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 626501810156937
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 553152737601010,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 868508056140879,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 407525007163047,
+											"parameters": {
+												"text": "\"Actually, i dont have to ask, you're forced to do it.\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 495807655359592
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 999657109257820,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "4"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 990440839622407,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Locatinator_",
+											"sid": 992884797399941,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Text",
+											"sid": 898476629292147,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 223924302478203,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"value": "4"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 492600355783125,
+											"parameters": {
+												"variable": "curQuest",
+												"value": "\"ScamQuest\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text8",
+											"sid": 201546997894317,
+											"parameters": {
+												"text": "\"Give the dude 10 woods\""
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "PlayerCollision",
+											"sid": 379499620946306,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 270719829687618
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 924792098513893,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "5"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 185496525958184,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 147797384298482,
+											"parameters": {
+												"text": "\"Go do it\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 606145034821442
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 276005913796350,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "6"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 161124417444060,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Locatinator_",
+											"sid": 641864663630738,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Text",
+											"sid": 188217886825657,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 843764916638359,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"value": "4"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text8",
+											"sid": 514929032702739,
+											"parameters": {
+												"text": "\"Give the dude 10 woods\""
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "PlayerCollision",
+											"sid": 523064079823576,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 570858433972381
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 636849468169951,
+									"parameters": {
+										"first-value": "item_Wood",
+										"comparison": 4,
+										"second-value": "10"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 809593556801125,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 898506906929944,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 144734702929693,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 189228004708745,
+											"parameters": {
+												"text": "\"Hmm, a newcomer ey?\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 918183354326697
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 328828911427586,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 239921135610044,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 778240122839347,
+											"parameters": {
+												"text": "\"You have what i wanted tho\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 103892632017023
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 799520372060580,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 535764557743747,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 886775006403329,
+											"parameters": {
+												"text": "\"Go talk to the guy beside the fence first, then come straight back here!\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 111185996668069
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 940339843111246,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "4"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 118632469648689,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Locatinator_",
+											"sid": 682163014898153,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Text",
+											"sid": 998176262056122,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 529710736587995,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "PlayerCollision",
+											"sid": 480298835846914,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 749324017578887
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 573631579486543,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 440654671255484,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 215719899644773,
+											"parameters": {
+												"text": "\"Good boy.\"",
+												"duration": "1"
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 875498212096236,
+											"parameters": {
+												"variable": "item_Wood",
+												"value": "10"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 630990895245795,
+											"parameters": {
+												"variable": "QuestFinishedStage",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 107256389394938
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 855603927327262,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "2"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 831950595931653,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 398768939125646,
+											"parameters": {
+												"text": "\"Thanks.\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 747490479625461
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 597871488635165,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 598822427062908,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 730472050104008,
+											"parameters": {
+												"text": "\"What is your payment?\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 595590268211465
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 587457627137461,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 320257684436967,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 177675701776741,
+											"parameters": {
+												"text": "\"You're gay, so you're a slave in my eyes.\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 663831713188461
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 500150899321083,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "4"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 112121730890023,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Locatinator_",
+											"sid": 530343168902448,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Text",
+											"sid": 655029603158821,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 899262784256067,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"value": "4"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 116331818191173,
+											"parameters": {
+												"variable": "curQuest",
+												"value": "\"Free\""
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "PlayerCollision",
+											"sid": 809252568118646,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text8",
+											"sid": 112586355257389,
+											"parameters": {
+												"text": "\"No Quests\""
+											}
+										}
+									],
+									"sid": 863496694813710
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 594875219590064,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "5"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 171500494917583,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Text",
+											"sid": 544509162520395,
+											"parameters": {
+												"text": "\"Go away\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 723602559198249
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 563085587442214,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"comparison": 0,
+												"value": "6"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 803623925655301,
+											"parameters": {
+												"first-value": "QuestFinishedStage",
+												"comparison": 0,
+												"second-value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Locatinator_",
+											"sid": 686119875599004,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "Text",
+											"sid": 428904616261192,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 528800518178292,
+											"parameters": {
+												"variable": "NPCArrayPointer3",
+												"value": "4"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "Text8",
+											"sid": 227668562245861,
+											"parameters": {
+												"text": "\"No Quests\""
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "PlayerCollision",
+											"sid": 478208571425866,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 993534280160129
+								}
+							]
 						}
 					]
 				}
@@ -568,7 +3548,7 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 522722486027511,
+							"sid": 487918029587522,
 							"parameters": {
 								"key": 90
 							}
@@ -576,7 +3556,7 @@
 						{
 							"id": "is-overlapping-at-offset",
 							"objectClass": "player2",
-							"sid": 988932728487870,
+							"sid": 937223674544413,
 							"parameters": {
 								"object": "rock",
 								"offset-x": "12",
@@ -588,7 +3568,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "rock",
-							"sid": 833991699019416,
+							"sid": 941711531227932,
 							"parameters": {
 								"object": "Particles",
 								"layer": "0",
@@ -599,7 +3579,7 @@
 						{
 							"id": "set-angle",
 							"objectClass": "Particles",
-							"sid": 845893488114302,
+							"sid": 713051286916707,
 							"parameters": {
 								"angle": "270"
 							}
@@ -607,14 +3587,14 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "rock",
-							"sid": 512637696277565,
+							"sid": 426066821882458,
 							"parameters": {
 								"instance-variable": "BlockHealth",
 								"value": "1"
 							}
 						}
 					],
-					"sid": 936761587790520
+					"sid": 491213052636923
 				},
 				{
 					"eventType": "block",
@@ -622,7 +3602,7 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 361660712576043,
+							"sid": 209605311016882,
 							"parameters": {
 								"key": 49
 							}
@@ -632,7 +3612,7 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 238771032501107,
+							"sid": 652568064284008,
 							"parameters": {
 								"variable": "item_Stone",
 								"value": "10"
@@ -641,14 +3621,14 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 620293399878780,
+							"sid": 276602808325325,
 							"parameters": {
 								"variable": "item_Wood",
 								"value": "10"
 							}
 						}
 					],
-					"sid": 579209843606687
+					"sid": 617926645511961
 				},
 				{
 					"eventType": "block",
@@ -656,7 +3636,7 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 301906036205288,
+							"sid": 479605132555490,
 							"parameters": {
 								"key": 90
 							}
@@ -664,16 +3644,26 @@
 						{
 							"id": "is-overlapping-at-offset",
 							"objectClass": "player2",
-							"sid": 609937641215484,
+							"sid": 861095590678650,
 							"parameters": {
 								"object": "construction2",
 								"offset-x": "12",
 								"offset-y": "12"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 180613066894020,
+							"parameters": {
+								"first-value": "QuestFinishedStage",
+								"comparison": 0,
+								"second-value": "1"
+							}
 						}
 					],
 					"actions": [],
-					"sid": 772194676695228,
+					"sid": 740052810815273,
 					"children": [
 						{
 							"eventType": "block",
@@ -681,7 +3671,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 602353060255290,
+									"sid": 802358043372489,
 									"parameters": {
 										"variable": "item_Stone",
 										"comparison": 4,
@@ -691,7 +3681,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 368185756955932,
+									"sid": 154961780755396,
 									"parameters": {
 										"variable": "obj_stone_2",
 										"comparison": 4,
@@ -703,7 +3693,7 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "construction2",
-									"sid": 651189642064736,
+									"sid": 295939727361942,
 									"parameters": {
 										"object": "Particles",
 										"layer": "0",
@@ -714,7 +3704,7 @@
 								{
 									"id": "set-angle",
 									"objectClass": "Particles",
-									"sid": 390878934090336,
+									"sid": 145168081999414,
 									"parameters": {
 										"angle": "270"
 									}
@@ -722,7 +3712,7 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 875625236176028,
+									"sid": 494086408557531,
 									"parameters": {
 										"variable": "item_Stone",
 										"value": "1"
@@ -731,14 +3721,14 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 458720917162585,
+									"sid": 985716588155550,
 									"parameters": {
 										"variable": "obj_stone_2",
 										"value": "1"
 									}
 								}
 							],
-							"sid": 910206912836286
+							"sid": 332347900726470
 						},
 						{
 							"eventType": "block",
@@ -746,7 +3736,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 716064139184163,
+									"sid": 658283905322014,
 									"parameters": {
 										"variable": "item_Wood",
 										"comparison": 4,
@@ -756,7 +3746,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 420905008122264,
+									"sid": 109137974432990,
 									"parameters": {
 										"variable": "obj_wood_2",
 										"comparison": 4,
@@ -768,7 +3758,7 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "construction2",
-									"sid": 643854927588274,
+									"sid": 122801709398568,
 									"parameters": {
 										"object": "Particles",
 										"layer": "0",
@@ -779,7 +3769,7 @@
 								{
 									"id": "set-angle",
 									"objectClass": "Particles",
-									"sid": 390878934090336,
+									"sid": 380782599843769,
 									"parameters": {
 										"angle": "270"
 									}
@@ -787,7 +3777,7 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 844175164744760,
+									"sid": 326898724776982,
 									"parameters": {
 										"variable": "item_Wood",
 										"value": "1"
@@ -796,14 +3786,14 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 537778857771212,
+									"sid": 649446767532952,
 									"parameters": {
 										"variable": "obj_wood_2",
 										"value": "1"
 									}
 								}
 							],
-							"sid": 512418499191176
+							"sid": 958736079737923
 						},
 						{
 							"eventType": "block",
@@ -811,7 +3801,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 674557837601937,
+									"sid": 817568694703071,
 									"parameters": {
 										"first-value": "obj_wood_2",
 										"comparison": 0,
@@ -821,7 +3811,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 334026303669207,
+									"sid": 214774102084982,
 									"parameters": {
 										"first-value": "obj_stone_2",
 										"comparison": 0,
@@ -833,7 +3823,7 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "construction2",
-									"sid": 312709994708664,
+									"sid": 778949933766402,
 									"parameters": {
 										"object": "campfire",
 										"layer": "0",
@@ -844,7 +3834,7 @@
 								{
 									"id": "set-angle",
 									"objectClass": "campfire",
-									"sid": 499675820990430,
+									"sid": 673160724769626,
 									"parameters": {
 										"angle": "campfire.Angle + 180"
 									}
@@ -852,7 +3842,7 @@
 								{
 									"id": "set-size",
 									"objectClass": "campfire",
-									"sid": 747807575375760,
+									"sid": 591243557503760,
 									"parameters": {
 										"width": "100",
 										"height": "100"
@@ -861,30 +3851,30 @@
 								{
 									"id": "destroy",
 									"objectClass": "construction2",
-									"sid": 762189723366429
+									"sid": 216281750421456
 								},
 								{
 									"id": "destroy",
-									"objectClass": "Text7",
-									"sid": 821190713717726
+									"objectClass": "Tooltip4",
+									"sid": 590528892472272
 								},
 								{
 									"id": "destroy",
-									"objectClass": "Text6",
-									"sid": 281842554124985
+									"objectClass": "Tooltip3",
+									"sid": 410982325233730
 								},
 								{
 									"id": "destroy",
 									"objectClass": "stoneBalls2",
-									"sid": 872771130401701
+									"sid": 277606269174138
 								},
 								{
 									"id": "destroy",
 									"objectClass": "tree_item_icon2",
-									"sid": 464699341977079
+									"sid": 783132257845706
 								}
 							],
-							"sid": 969205851355991
+							"sid": 826668963260937
 						}
 					]
 				},
@@ -894,7 +3884,7 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 578979913112768,
+							"sid": 258901524700440,
 							"parameters": {
 								"key": 90
 							}
@@ -902,16 +3892,26 @@
 						{
 							"id": "is-overlapping-at-offset",
 							"objectClass": "player2",
-							"sid": 158039019494667,
+							"sid": 789008294710817,
 							"parameters": {
 								"object": "construction",
 								"offset-x": "12",
 								"offset-y": "12"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 127437475423832,
+							"parameters": {
+								"first-value": "QuestFinishedStage",
+								"comparison": 0,
+								"second-value": "1"
+							}
 						}
 					],
 					"actions": [],
-					"sid": 482774060575596,
+					"sid": 120294112486389,
 					"children": [
 						{
 							"eventType": "block",
@@ -919,7 +3919,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 519930046788095,
+									"sid": 453660053863131,
 									"parameters": {
 										"variable": "item_Stone",
 										"comparison": 4,
@@ -929,7 +3929,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 167950821225774,
+									"sid": 858093836813183,
 									"parameters": {
 										"variable": "obj_stone_1",
 										"comparison": 4,
@@ -941,7 +3941,7 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "construction",
-									"sid": 188456369210049,
+									"sid": 635709935730866,
 									"parameters": {
 										"object": "Particles",
 										"layer": "0",
@@ -952,7 +3952,7 @@
 								{
 									"id": "set-angle",
 									"objectClass": "Particles",
-									"sid": 805453045405920,
+									"sid": 911709964621775,
 									"parameters": {
 										"angle": "270"
 									}
@@ -960,7 +3960,7 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 128839563087815,
+									"sid": 765574991600739,
 									"parameters": {
 										"variable": "item_Stone",
 										"value": "1"
@@ -969,14 +3969,14 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 963577643618694,
+									"sid": 441918358837421,
 									"parameters": {
 										"variable": "obj_stone_1",
 										"value": "1"
 									}
 								}
 							],
-							"sid": 346988868466669
+							"sid": 302875480181274
 						},
 						{
 							"eventType": "block",
@@ -984,7 +3984,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 791947569571947,
+									"sid": 425522454138876,
 									"parameters": {
 										"variable": "item_Wood",
 										"comparison": 4,
@@ -994,7 +3994,7 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 630528054092270,
+									"sid": 101222257882758,
 									"parameters": {
 										"variable": "obj_wood_1",
 										"comparison": 4,
@@ -1006,7 +4006,7 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "construction",
-									"sid": 432721350583841,
+									"sid": 234902541505449,
 									"parameters": {
 										"object": "Particles",
 										"layer": "0",
@@ -1017,7 +4017,7 @@
 								{
 									"id": "set-angle",
 									"objectClass": "Particles",
-									"sid": 287391287207486,
+									"sid": 938165686420332,
 									"parameters": {
 										"angle": "270"
 									}
@@ -1025,7 +4025,7 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 245935510046127,
+									"sid": 988752314209436,
 									"parameters": {
 										"variable": "item_Wood",
 										"value": "1"
@@ -1034,14 +4034,14 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 317853268552451,
+									"sid": 293188892005697,
 									"parameters": {
 										"variable": "obj_wood_1",
 										"value": "1"
 									}
 								}
 							],
-							"sid": 186231494607003
+							"sid": 389945249971266
 						},
 						{
 							"eventType": "block",
@@ -1049,7 +4049,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 798793688140204,
+									"sid": 264075002158182,
 									"parameters": {
 										"first-value": "obj_wood_1",
 										"comparison": 0,
@@ -1059,7 +4059,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 922622849803109,
+									"sid": 971288551503347,
 									"parameters": {
 										"first-value": "obj_stone_1",
 										"comparison": 0,
@@ -1071,7 +4071,7 @@
 								{
 									"id": "spawn-another-object",
 									"objectClass": "construction",
-									"sid": 922097792933721,
+									"sid": 962194686828212,
 									"parameters": {
 										"object": "house",
 										"layer": "0",
@@ -1082,7 +4082,7 @@
 								{
 									"id": "set-size",
 									"objectClass": "house",
-									"sid": 774203682992751,
+									"sid": 796204922327272,
 									"parameters": {
 										"width": "300",
 										"height": "300"
@@ -1091,30 +4091,30 @@
 								{
 									"id": "destroy",
 									"objectClass": "construction",
-									"sid": 197228844874030
+									"sid": 796450438578892
 								},
 								{
 									"id": "destroy",
-									"objectClass": "Text4",
-									"sid": 769200978856474
+									"objectClass": "Tooltip1",
+									"sid": 847802608057728
 								},
 								{
 									"id": "destroy",
-									"objectClass": "Text5",
-									"sid": 738452117534454
+									"objectClass": "Tooltip2",
+									"sid": 285406453507689
 								},
 								{
 									"id": "destroy",
 									"objectClass": "Objective_rock_1",
-									"sid": 839061125687302
+									"sid": 440900912570868
 								},
 								{
 									"id": "destroy",
 									"objectClass": "Objective_wood_1",
-									"sid": 441011510334952
+									"sid": 235849527134117
 								}
 							],
-							"sid": 542675405661096
+							"sid": 675434993509479
 						}
 					]
 				},
@@ -1124,7 +4124,7 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 585513109038917,
+							"sid": 929343166401962,
 							"parameters": {
 								"key": 90
 							}
@@ -1132,7 +4132,7 @@
 						{
 							"id": "is-overlapping-at-offset",
 							"objectClass": "player2",
-							"sid": 432534223656228,
+							"sid": 897564243878935,
 							"parameters": {
 								"object": "tree",
 								"offset-x": "12",
@@ -1144,7 +4144,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "tree",
-							"sid": 724220768770816,
+							"sid": 678693566365403,
 							"parameters": {
 								"object": "Particles",
 								"layer": "0",
@@ -1155,7 +4155,7 @@
 						{
 							"id": "set-angle",
 							"objectClass": "Particles",
-							"sid": 878639336307348,
+							"sid": 538235087478371,
 							"parameters": {
 								"angle": "270"
 							}
@@ -1163,25 +4163,25 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "tree",
-							"sid": 375933810480799,
+							"sid": 666549050451791,
 							"parameters": {
 								"instance-variable": "BlockHealth",
 								"value": "1"
 							}
 						}
 					],
-					"sid": 270599214307062,
+					"sid": 120845250010248,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [],
 							"actions": [],
-							"sid": 999804411171409
+							"sid": 244976612281162
 						}
 					]
 				}
 			],
-			"sid": 946882590032165
+			"sid": 500798689879607
 		}
 	],
 	"sid": 739004957710502

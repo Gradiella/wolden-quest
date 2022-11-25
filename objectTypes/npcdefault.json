@@ -1,35 +1,29 @@
 {
-	"name": "Locatinator_",
+	"name": "npcdefault",
 	"plugin-id": "Sprite",
-	"sid": 622337384363613,
+	"sid": 513840759479630,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Anchor",
-			"name": "Anchor",
-			"sid": 874270269421807
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 17,
+						"width": 25,
+						"height": 33,
 						"originX": 0.5,
-						"originY": 0.8235294117647058,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
-						"exportQuality": 1,
-						"imageSpriteId": 2171014,
+						"exportQuality": 0.8,
+						"imageSpriteId": 8740247,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 848850298845910,
+				"sid": 849821176404805,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

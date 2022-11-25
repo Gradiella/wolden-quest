@@ -1,14 +1,14 @@
 {
-	"name": "Text5",
+	"name": "Tooltip3",
 	"plugin-id": "Text",
-	"sid": 994066517951290,
+	"sid": 804659677106996,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Anchor",
 			"name": "Anchor",
-			"sid": 411222840451415
+			"sid": 695210938155452
 		}
 	],
 	"effectTypes": []
