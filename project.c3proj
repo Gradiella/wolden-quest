@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 31702,
-	"name": "RPG project shi bro",
+	"name": "WoldenQuest",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -42,6 +42,30 @@
 			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -93,7 +117,18 @@
 			"Text8",
 			"locatinator_default",
 			"npcdefault",
-			"npcdefault2"
+			"npcdefault2",
+			"Sprite",
+			"Screenshot_",
+			"Screenshot_2",
+			"Menu_BG",
+			"GAME_LOGO",
+			"Button",
+			"PlayANimatin",
+			"Menu_BG2",
+			"Mouse",
+			"TextInput",
+			"Text4"
 		],
 		"subfolders": [
 			{
@@ -199,13 +234,17 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"MENU",
+			"Layout 2"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Menu",
+			"Ahhh"
 		],
 		"subfolders": []
 	},
@@ -308,12 +347,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "Another RPG game that mimics the style of undertale.. sort of..",
 		"version": "1.0.0.0",
-		"author": "",
-		"authorEmail": "",
-		"authorWebsite": " ",
-		"appId": "",
+		"author": "Aeroshide",
+		"authorEmail": "aeroshideBusiness@gmail.com",
+		"authorWebsite": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+		"appId": "com.aeroshide.woldenQuest",
 		"pixelRounding": true,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,

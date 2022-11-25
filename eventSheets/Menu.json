@@ -1,0 +1,112 @@
+{
+	"name": "Menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 442188285561333
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Menu_BG2",
+					"sid": 847591221358444,
+					"parameters": {
+						"x": "Menu_BG2.X + 0.5",
+						"y": "Menu_BG2.Y + 0.5"
+					}
+				}
+			],
+			"sid": 419557633412858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 379955288575409,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 460318108560900,
+					"parameters": {
+						"object": "PlayANimatin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 110342180839384,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 446385385791456
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 349757604547249,
+					"parameters": {
+						"object": "PlayANimatin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "PlayANimatin",
+					"sid": 245723636574205,
+					"parameters": {
+						"animation": "\"Hover\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 276273872106195
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 454708606227961,
+					"parameters": {
+						"object": "PlayANimatin"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "PlayANimatin",
+					"sid": 599896986244533,
+					"parameters": {
+						"animation": "\"Default\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 772665427934454
+		}
+	],
+	"sid": 584892880672213
+}

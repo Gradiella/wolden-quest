@@ -1,0 +1,80 @@
+{
+	"name": "PlayANimatin",
+	"plugin-id": "Sprite",
+	"sid": 749763391032214,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 512,
+						"height": 512,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5785421,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 907208368428784,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 512,
+						"height": 512,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8436681,
+						"collisionPoly": {
+							"points": [
+								0.26171875,
+								0.26171875,
+								0.5,
+								0.33203125,
+								0.58984375,
+								0.408203125,
+								0.720703125,
+								0.5,
+								0.546875,
+								0.546875,
+								0.5,
+								0.541015625,
+								0.478515625,
+								0.51953125,
+								0.2421875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 606919912568767,
+				"name": "Hover",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

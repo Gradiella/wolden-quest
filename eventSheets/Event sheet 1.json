@@ -142,6 +142,16 @@
 			"sid": 342406229048744
 		},
 		{
+			"eventType": "variable",
+			"name": "buildFinished",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 811256789514889
+		},
+		{
 			"eventType": "script",
 			"script": ""
 		},
@@ -844,10 +854,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 773750287629616,
+									"sid": 161167696598894,
 									"parameters": {
-										"text": "\"Now lets get into the second fundemntals!. Which is building\"",
-										"duration": "1"
+										"text": "\"Now lets get into the second fundamentals!. Which is building\"",
+										"duration": "2"
 									}
 								}
 							],
@@ -918,10 +928,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 153679358860649,
+									"sid": 985467708813475,
 									"parameters": {
 										"text": "\"You see those tooltip on top of the Unfinished buildings?\"",
-										"duration": "1"
+										"duration": "2"
 									}
 								},
 								{
@@ -1019,10 +1029,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 138828249156518,
+									"sid": 848416136684200,
 									"parameters": {
 										"text": "\"Thats your progress counter towards building the structure\"",
-										"duration": "1"
+										"duration": "2"
 									}
 								}
 							],
@@ -1056,10 +1066,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 842504190236893,
+									"sid": 549563299071171,
 									"parameters": {
 										"text": "\"How about now you try to finish the buildings?\"",
-										"duration": "1"
+										"duration": "2"
 									}
 								}
 							],
@@ -1093,10 +1103,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 226540075804610,
+									"sid": 538022289517604,
 									"parameters": {
 										"text": "\"And also, Socialize!, im not the only human being that is here!\"",
-										"duration": "1"
+										"duration": "2"
 									}
 								}
 							],
@@ -1130,9 +1140,9 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 543206897599479,
+									"sid": 971879373644202,
 									"parameters": {
-										"text": "\"They will sure love to helo newcomers.\"",
+										"text": "\"They will sure love to help newcomers.\"",
 										"duration": "1"
 									}
 								}
@@ -1167,10 +1177,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 163476621768757,
+									"sid": 399413821064617,
 									"parameters": {
 										"text": "\"Anyway See ya.\"",
-										"duration": "1"
+										"duration": "0.6"
 									}
 								}
 							],
@@ -1266,10 +1276,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 989544778069096,
+									"sid": 440909076979008,
 									"parameters": {
 										"text": "\"Go socialize with other people man, are you an introvert?\"",
-										"duration": "1"
+										"duration": "2"
 									}
 								}
 							],
@@ -1744,10 +1754,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 175418843576564,
+									"sid": 118128298255374,
 									"parameters": {
 										"text": "\"He's not that annoying, trust me!\"",
-										"duration": "2"
+										"duration": "1"
 									}
 								}
 							],
@@ -1843,10 +1853,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 836297013214519,
+									"sid": 499871791252043,
 									"parameters": {
 										"text": "\"Hello im a...\"",
-										"duration": "1"
+										"duration": "0.6"
 									}
 								}
 							],
@@ -1880,10 +1890,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 370784125990093,
+									"sid": 716921706120095,
 									"parameters": {
 										"text": "\"I dont really know my job, but i stand here all day\"",
-										"duration": "1"
+										"duration": "2"
 									}
 								}
 							],
@@ -1917,10 +1927,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 865849401000589,
+									"sid": 779217554500701,
 									"parameters": {
 										"text": "\"Waiting for someone to finnaly talk to me.\"",
-										"duration": "2"
+										"duration": "1"
 									}
 								}
 							],
@@ -1954,10 +1964,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 887382976741786,
+									"sid": 817610564916254,
 									"parameters": {
 										"text": "\"Uhm, sorry, hey!\"",
-										"duration": "2"
+										"duration": "0.6"
 									}
 								}
 							],
@@ -1991,10 +2001,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 161803092492069,
+									"sid": 342359418284258,
 									"parameters": {
 										"text": "\"You're a newcomer huh?\"",
-										"duration": "2"
+										"duration": "1"
 									}
 								}
 							],
@@ -2028,10 +2038,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 281472220449166,
+									"sid": 424215022574796,
 									"parameters": {
 										"text": "\"Well, you have just discovered a new Area!\"",
-										"duration": "1"
+										"duration": "1.4"
 									}
 								}
 							],
@@ -2065,9 +2075,9 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 880470116327418,
+									"sid": 143094130209371,
 									"parameters": {
-										"text": "\"This is called Rocky COLIY\"",
+										"text": "\"This is called Rock Rocky Rocks\"",
 										"duration": "1"
 									}
 								}
@@ -2102,10 +2112,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 696533230838335,
+									"sid": 546715649549783,
 									"parameters": {
 										"text": "\"Don't ask me why its named that, its history at this point.\"",
-										"duration": "1"
+										"duration": "3"
 									}
 								}
 							],
@@ -2139,10 +2149,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 656319269635057,
+									"sid": 844858495756096,
 									"parameters": {
 										"text": "\"In this Area, There Soooo many Stonesssss\"",
-										"duration": "1"
+										"duration": "3"
 									}
 								}
 							],
@@ -2213,10 +2223,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 331473670446567,
+									"sid": 958899670873926,
 									"parameters": {
 										"text": "\"Fun fact : Stones are tougher to break!!!\"",
-										"duration": "1"
+										"duration": "2"
 									}
 								}
 							],
@@ -2250,10 +2260,10 @@
 								{
 									"id": "typewriter-text",
 									"objectClass": "Text",
-									"sid": 189074437351695,
+									"sid": 171120030890862,
 									"parameters": {
 										"text": "\"it took me while to notice that Stone is harder than Wood,, So i would be proud if i educate someone.\"",
-										"duration": "1"
+										"duration": "4"
 									}
 								}
 							],
@@ -2601,10 +2611,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 461961564257467,
+											"sid": 933447695853365,
 											"parameters": {
 												"text": "\"Talk to the guy beside the fence first, you wouldnt get what am i saying\"",
-												"duration": "1"
+												"duration": "2"
 											}
 										}
 									],
@@ -2700,10 +2710,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 354756284300474,
+											"sid": 408565212284705,
 											"parameters": {
 												"text": "\"Hey, Im homphobic, transphobic and racist\"",
-												"duration": "1"
+												"duration": "2"
 											}
 										}
 									],
@@ -2737,10 +2747,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 635993640902052,
+											"sid": 288966351597761,
 											"parameters": {
 												"text": "\"Would you mind giving me 10 wood?\"",
-												"duration": "1"
+												"duration": "2"
 											}
 										}
 									],
@@ -2774,10 +2784,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 407525007163047,
+											"sid": 989305632083791,
 											"parameters": {
 												"text": "\"Actually, i dont have to ask, you're forced to do it.\"",
-												"duration": "1"
+												"duration": "2"
 											}
 										}
 									],
@@ -3090,10 +3100,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 886775006403329,
+											"sid": 293760386969982,
 											"parameters": {
 												"text": "\"Go talk to the guy beside the fence first, then come straight back here!\"",
-												"duration": "1"
+												"duration": "2.6"
 											}
 										}
 									],
@@ -3189,10 +3199,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 215719899644773,
+											"sid": 501367570885113,
 											"parameters": {
 												"text": "\"Good boy.\"",
-												"duration": "1"
+												"duration": "0.5"
 											}
 										},
 										{
@@ -3207,10 +3217,10 @@
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 630990895245795,
+											"sid": 351871643679633,
 											"parameters": {
 												"variable": "QuestFinishedStage",
-												"value": "2"
+												"value": "1"
 											}
 										}
 									],
@@ -3244,10 +3254,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 398768939125646,
+											"sid": 954188743497973,
 											"parameters": {
 												"text": "\"Thanks.\"",
-												"duration": "1"
+												"duration": "0.5"
 											}
 										}
 									],
@@ -3296,11 +3306,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 587457627137461,
+											"sid": 828767591463000,
 											"parameters": {
 												"variable": "NPCArrayPointer3",
 												"comparison": 0,
-												"value": "3"
+												"value": "4"
 											}
 										},
 										{
@@ -3333,11 +3343,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 500150899321083,
+											"sid": 912427152361815,
 											"parameters": {
 												"variable": "NPCArrayPointer3",
 												"comparison": 0,
-												"value": "4"
+												"value": "5"
 											}
 										},
 										{
@@ -3371,10 +3381,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 899262784256067,
+											"sid": 323005650212438,
 											"parameters": {
 												"variable": "NPCArrayPointer3",
-												"value": "4"
+												"value": "5"
 											}
 										},
 										{
@@ -3412,11 +3422,11 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 594875219590064,
+											"sid": 410960044795153,
 											"parameters": {
 												"variable": "NPCArrayPointer3",
 												"comparison": 0,
-												"value": "5"
+												"value": "6"
 											}
 										},
 										{
@@ -3434,10 +3444,10 @@
 										{
 											"id": "typewriter-text",
 											"objectClass": "Text",
-											"sid": 544509162520395,
+											"sid": 552629520669915,
 											"parameters": {
 												"text": "\"Go away\"",
-												"duration": "1"
+												"duration": "0.5"
 											}
 										}
 									],
@@ -3821,31 +3831,11 @@
 							],
 							"actions": [
 								{
-									"id": "spawn-another-object",
-									"objectClass": "construction2",
-									"sid": 778949933766402,
-									"parameters": {
-										"object": "campfire",
-										"layer": "0",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-angle",
+									"id": "set-visible",
 									"objectClass": "campfire",
-									"sid": 673160724769626,
+									"sid": 864416632568323,
 									"parameters": {
-										"angle": "campfire.Angle + 180"
-									}
-								},
-								{
-									"id": "set-size",
-									"objectClass": "campfire",
-									"sid": 591243557503760,
-									"parameters": {
-										"width": "100",
-										"height": "100"
+										"visibility": "visible"
 									}
 								},
 								{
@@ -4069,23 +4059,11 @@
 							],
 							"actions": [
 								{
-									"id": "spawn-another-object",
-									"objectClass": "construction",
-									"sid": 962194686828212,
-									"parameters": {
-										"object": "house",
-										"layer": "0",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								},
-								{
-									"id": "set-size",
+									"id": "set-visible",
 									"objectClass": "house",
-									"sid": 796204922327272,
+									"sid": 421267358832120,
 									"parameters": {
-										"width": "300",
-										"height": "300"
+										"visibility": "visible"
 									}
 								},
 								{
@@ -4112,11 +4090,51 @@
 									"id": "destroy",
 									"objectClass": "Objective_wood_1",
 									"sid": 235849527134117
+								},
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 569844508718776,
+									"parameters": {
+										"variable": "buildFinished"
+									}
 								}
 							],
 							"sid": 675434993509479
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "house",
+							"sid": 957969309276922,
+							"parameters": {
+								"object": "player2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 613106419630578,
+							"parameters": {
+								"variable": "buildFinished"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 122976376789006,
+							"parameters": {
+								"layout": "Layout 2"
+							}
+						}
+					],
+					"sid": 130821197844480
 				},
 				{
 					"eventType": "block",

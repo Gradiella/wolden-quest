@@ -1,0 +1,28 @@
+{
+	"name": "Ahhh",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 878166641242589
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Menu_BG2",
+					"sid": 623059153504772,
+					"parameters": {
+						"x": "Menu_BG2.X + 0.5",
+						"y": "Menu_BG2.Y + 0.5"
+					}
+				}
+			],
+			"sid": 582280877312583
+		}
+	],
+	"sid": 189580388018623
+}
